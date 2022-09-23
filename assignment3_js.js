@@ -66,6 +66,7 @@ while (num != 0) {
   }
   num = Math.floor(num / 10);
 }
+
 //Print Largest number in given number
 var num = 5436, temp = num, maxNum = 0;
 while (temp != 0) {
@@ -74,7 +75,7 @@ while (temp != 0) {
     maxNum = rem;
   temp = Math.floor(temp / 10);
 }
-console.log(maxNum);
+console.log("Largest digit in " + num + "is", maxNum);
 
 
 
@@ -87,4 +88,82 @@ while (temp != 0) {
     minNum = rem;
   temp = Math.floor(temp / 10);
 }
-console.log(minNum);
+console.log("smallest digit in " + num + "is", minNum);
+
+//check whether a number is perfect number
+function perfectNumber(number) {
+  var temp = 0;
+  for (var i = 1; i <= number / 2; i++) {
+    if (number % i === 0) {
+      temp += i;
+    }
+  }
+
+  if (temp === number && temp !== 0) {
+    console.log("It is a perfect number.");
+  }
+  else {
+    console.log("It is not a perfect number.");
+  }
+}
+perfectNumber(28);
+
+
+//check whether a number is prime number
+var num = 123, flag = 0;
+if (num == 0 || num == 1)
+  flag = 1;
+
+for (var i = 2; i <= num / 2; i++) {
+  console.log(num % i);
+  if (num % i == 0) {
+    flag = 1;
+    break;
+  }
+}
+console.log(flag);
+if (flag == 1)
+  console.log(num + " is not prime number");
+else
+  console.log(num + " is prime number");
+
+
+
+// Write Fibonacci series upto first 10 numbers
+var firstnum = 0, secondnum = 1, sum = 0;
+console.log(firstnum);
+console.log(secondnum);
+for (i = 1; i <= 8; i++) {
+  sum = firstnum + secondnum;
+  firstnum = secondnum;
+  secondnum = sum;
+  console.log(sum);
+}
+
+/** Steps to prepare code:
+  1. Declare all inputs and outputs variable in logics
+  2. Assign some values to input variables
+  3. Perform Business Logic
+  4. Compute the final output and display  */
+
+/*** Code to find area of Circle */
+var r = 1.2, pi = 3.421, area;
+area = pi * r ** 2;
+console.log("Area of circle is ", pi * r ** 2);
+
+/**  Code to find SimpleInterest */
+var principle = 2000, time = 2, rate = 10;
+var SimpleInterest = (principle * time * rate) / 100;
+console.log(SimpleInterest);
+
+/**Code to find cube of a number */
+var num = 5;
+var result = num * num * num;
+console.log(result);
+
+/**Code to find (a+b)^2 */
+var a = 5, b = 7, value;
+value = a ** 2 + b ** 2 + 2 * a * b;
+console.log(value);
+
+
