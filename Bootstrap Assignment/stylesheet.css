@@ -1,1 +1,106 @@
+.txt-center{
+text-align:center !important;
+font-weight: 800 !important;
+font-size:40px;
+}
+.nav-text-color{
+    color:white !important;
+    font-weight: 700 !important;
+}
+.bg-color{
+/* background-color: #17406c; #0d6efd;*/
+background-color: #e1bc46f5 !important;
+}
+.bg-change{
+    background-color: rgba(219,192,34,0.82);
+}
+.carousel-height img{
+    height: 500px !important;
+} 
+.card-border{
+   border: 5px solid rgba(0, 0, 0, 1) !important;
+   box-shadow: 2px 3px 2px 3px;
+   border-radius: 5% !important;
+/* background-color: rgba(89, 105, 193, 1) !important;   */
+}
+.card-body p{
+    /* font-weight: 500 !important ;
+    font-size: 25px !important; */
+    font-style: oblique;
+}
+.sm-txt{
+    font-size: 23px !important;
+}
+.fill-color{
+    width:30px;
+    height:60px;
+    color:#ff0000;
+}
+.fill-color:hover{
+    background-color: black;
+   }
+.inner{
+    overflow: hidden;
+}
+.inner img{
+transition: all 1.5s ease;
+} 
+.inner:hover img{
+    transform: scale(1.5);
+}
+/** Modal */
+.item-height{
+height:400px !important;
+width: 100%;
+object-fit:fill !important;
+}
+/** end of Modal */
 
+.icon-size{
+    height:5rem !important;
+    width:10rem !important
+
+}
+.font-colour{
+    color:yellow !important;
+
+}
+.icon-md{
+    font-size: 3rem; 
+    color: cornflowerblue;
+}
+.heading-lg:hover{
+  font-size: 2.2rem !important;
+}
+.animation-img{
+    animation: slide-move 5s infinite;
+
+}
+@keyframes slide-move {
+    from {left: 0px;}
+    to {left: 300px;}
+  }
+/*
+.carousel-fade .carousel-inner .item {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+  }
+  .carousel-fade .carousel-inner .active {
+    opacity: 1;
+  }
+  .carousel-fade .carousel-inner .active.left,
+  .carousel-fade .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+  }
+  .carousel-fade .carousel-inner .next.left,
+  .carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+  }
+  .carousel-fade .carousel-control {
+    z-index: 2;
+  }
