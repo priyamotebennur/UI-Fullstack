@@ -82,11 +82,11 @@ let return_date = document.getElementById("to_place").value='';
 let num_person = document.getElementById("person_num").value='';
 
 /** types of seater */
-let sleeper_seat = document.getElementById("rb1").checked='';
-let semi_sleeper = document.getElementById("rb2").checked='';
-let sitter_seat = document.getElementById("rb3").checked='';
+let sleeper_seat = document.getElementById("rb1").checked=false;
+let semi_sleeper = document.getElementById("rb2").checked=false;
+let sitter_seat = document.getElementById("rb3").checked=false;
 
 /**selection of Ac or non-Ac */
-let AC = document.getElementById("facility_option_ac").checked;
-let non_ac = document.getElementById("facility_option_non").checked;
+let AC = document.getElementById("facility_option_ac").checked =false;
+let non_ac = document.getElementById("facility_option_non").checked=false;
 }
