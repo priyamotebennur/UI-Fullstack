@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equi="X-UA-compatible" content="IE-Edge">
+    <meta name="view port" content="width=device-width,initial-scale=1.0">
+    <title>Ajax Callbacks</title>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="dataTable">
+        <button onclick="ajaxCall()"> Click to Ajaxcall</button>
+        
+    </div>
+    <script>
+       function ajaxCall(){
+        let url = "https://jsonplaceholder.typicode.com/users";
+            fetch(url, { method: 'GET' }).then(response => response.json()).then(string => {
+                let tableData="";
+                let tblbody = "<table border='2'><tbody>";
+                tableData="<tr><th>ID</th><th>Name</th> <th colspan = '6'> ADDRESS</th> <tr colspan= '1' rowspan='2'> <td></td><td></td>"
+                    +"<th>Street</th><th>Suite</th><th>City</th><th>Zipcode</th><th>GEO-Lat</th><th>GEO-Long</th></tr>";
+                for (let i = 0; i < string.length; i++) {
+                    tableData += "<tr><td>" + string[i].id + "</td>" +
+                        "<td>" + string[i].name + "<td>";
+                    if (string[i].address) {
+                        tableData += string[i].address.street +"<td>" + string[i].address.suite + " <td>" + string[i].address.city + " <td>" + string[i].address.zipcode + " <td>" + string[i].address.geo.lat + " <td>" + string[i].address.geo.lng + "</td></tr>";
+                    }
+                }
+              
+                document.getElementById("dataTable").innerHTML = tblbody+tableData;
+            }).catch(errorMsg => console.log("error"));
+        }
+    </script>
+</body>
+</html>
